@@ -4,10 +4,10 @@
   "description": "",
   "main": "settings.js",
   "scripts": {
-    "start": "npm-run-all -s start:*",
-    "start:setup": "sh ./setup.sh",
-    "start:echo": "echo $GIT_REPO_NAME",
-    "start:nodered": "node /node-red/node_modules/node-red/red.js --userDir /node-red/$GIT_REPO_NAME"
+    "startx": "npm-run-all -s startx:*",
+    "startx:setup": "./setup.sh",
+    "startx:echo": "echo $GIT_REPO_NAME",
+    "startx:nodered": "node /node-red/node_modules/node-red/red.js --userDir /node-red/$GIT_REPO_NAME"
   },
   "author": "high-u <zen.crazyd@gmail.com> (https://github.com/high-u)",
   "license": "ISC",
