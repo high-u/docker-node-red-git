@@ -16,7 +16,7 @@ module.exports = {
   debugMaxLength: 1000,
   debugUseColors: true,
   flowFile: 'flows.json',
-  userDir: '/node-red/' + process.env.GIT_REPO_NAME,
+  //userDir: '/node-red/' + process.env.GIT_REPO_NAME,
   ui: { path: 'ui' },
   logging: {
     console: {
