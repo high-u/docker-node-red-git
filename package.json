@@ -4,9 +4,10 @@
   "description": "",
   "main": "settings.js",
   "scripts": {
-    "startx": "run-s startx:setup startx:nodered",
-    "startx:setup": "node ./setup.js",
-    "startx:nodered": "node /node-red/node_modules/node-red/red.js"
+    "startx": "run-s startx:setup startx:test startx:nodered",
+    "startx:setup": "sh ./setup.sh",
+    "startx:test": "echo ${NODE_RED_USERNAME}",
+    "startx:nodered": "node /node-red/node_modules/node-red/red.js flows.json"
   },
   "author": "high-u <zen.crazyd@gmail.com> (https://github.com/high-u)",
   "license": "ISC",

@@ -30,7 +30,8 @@ COPY package.json ./package.json
 RUN npm install
 
 # Bundle app source
-COPY setup.js ./setup.js
+# COPY setup.js ./setup.js
+COPY setup.sh ./setup.sh
 # RUN chmod +x ./setup.sh
 # COPY settings.js /src/settings.js
 # COPY flows_cred.json ./flows_cred.json

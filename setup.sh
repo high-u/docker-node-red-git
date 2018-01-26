@@ -5,3 +5,10 @@
 # cd $GIT_REPO_NAME
 # npm install
 # node /node-red/node_modules/node-red/red.js --userDir /node-red/$GIT_REPO_NAME
+
+
+cd ${HOME}
+git clone ${GIT_REPO_URL}
+mv $(basename ${GIT_REPO_URL} .git) .node-red
+cd ${HOME}/.node-red
+npm install

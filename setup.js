@@ -10,12 +10,17 @@ console.log(process.env.TESTENV)
 
 var path = require('path');
 var fs = require('fs-extra')
+var execSync = require('child_process').execSync
 
 if (process.env.GIT_REPOSITORY) {
-  var netrc = [
+  var cmd = [
     'cd ' + process.env.HOME,
-    'git clone ' + process.env.GIT_SSH,
-    'cd ' + path.basename(process.env.GIT_SSH, '.git')
+    'git clone ' + process.env.GIT_REPO_URL,
+    'mv ' + path.basename(process.env.GIT_REPO_URL, '.git') + ' .node-red',
+    'cd .node-red',
+    //'git clone ' + process.env.GIT_SSH + ' && cd $(basename $_ .git) ',
+    //'cd ' + path.basename(process.env.GIT_SSH, '.git'),
+    'npm install'
   ].join(';')
-  fs.writeFileSync(process.env.HOME + '/.netrc', netrc)
+  
 }
